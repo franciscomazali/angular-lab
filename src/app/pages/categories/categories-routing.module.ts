@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { CategoryListComponent } from './pages/categories/category-list/category-list.component';
-import { CategoryFormComponent } from './pages/categories/category-form/category-form.component';
-
+import { CategoryListComponent } from './category-list/category-list.component';
+import { CategoryFormComponent } from './category-form/category-form.component';
 
 const routes: Routes = [
   { path: '', component: CategoryListComponent },
@@ -11,7 +10,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class CategoriesRoutingModule { }
