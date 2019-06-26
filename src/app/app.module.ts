@@ -11,8 +11,7 @@ import { CategoriesModule } from './pages/categories/categories.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    CategoriesModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
