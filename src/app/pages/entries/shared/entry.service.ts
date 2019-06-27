@@ -10,7 +10,7 @@ import { Entry } from './entry.model';
   providedIn: 'root'
 })
 export class EntryService {
-  private apiPath: string = 'api/categories';
+  private apiPath: string = 'api/entries';
 
   constructor(private http: HttpClient) {}
 
