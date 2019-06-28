@@ -40,7 +40,7 @@ export class InMemoryService implements InMemoryDbService {
         paid: false,
         date: '05/10/2019',
         amount: '500,00',
-        type: 'renevue',
+        type: 'revenue',
       } as Entry,
       {
         id: 4,

@@ -12,7 +12,7 @@ import { Entry } from './entry.model';
 export class EntryService {
   private apiPath: string = 'api/entries';
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAll(): Observable<Entry[]> {
     return this.http.get(this.apiPath).pipe(
@@ -50,12 +50,14 @@ export class EntryService {
   }
 
   private jsonDataToCategory(jsonData: any): Entry {
-    return jsonData as Entry;
+    return Object.assign(new Entry(), jsonData);
   }
 
   private jsonDataToCategories(jsonData: any[]): Entry[] {
     const entries: Entry[] = [];
-    jsonData.forEach(element => entries.push(element as Entry));
+    jsonData.forEach(element => {
+      entries.push(Object.assign(new Entry(), element));
+    });
 
     return entries;
   }
